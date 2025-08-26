@@ -1,0 +1,197 @@
+/* БАЗОВЫЕ СТИЛИ MOBILE */
+
+/* стили заголовков */
+.title {
+    font-family: var(--font-title);
+    font-weight: var(--fw-semibold);
+    color: var(--text-accent);
+}
+
+.title--main {
+    font-size: 44px;
+    line-height: var(--line-height-tightest);
+    letter-spacing: var(--letter-spacing-tighter);
+}
+
+.title--section {
+    font-size: 36px;
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--letter-spacing-tighter);
+}
+
+.title--special {
+    font-size: 32px;
+    line-height: var(--line-height-tighter);
+    letter-spacing: var(--letter-spacing-tighter);
+}
+
+.title--subtitle {
+    font-size: 24px;
+    line-height: var(--line-height-tighter);
+    letter-spacing: var(--letter-spacing-tight-light);
+}
+
+.title--small {
+    font-size: 20px;
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--letter-spacing-tight-light);
+}
+
+/* АДАПТИВНЫЕ СТИЛИ */
+@media (min-width: var(--bp-tablet)) {
+    .title--main {
+        font-size: 84px;
+        line-height: var(--line-height-tightest);
+        letter-spacing: var(--letter-spacing-tightest);
+    }
+
+    .title--section {
+        font-size: 54px;
+        line-height: var(--line-height-relaxed);
+        letter-spacing: var(--letter-spacing-tightest);
+    }
+
+    .title--special {
+        font-size: 40px;
+        line-height: var(--line-height-relaxed);
+        letter-spacing: var(--letter-spacing-tight);
+    }
+
+    .title--subtitle {
+        font-size: 32px;
+        line-height: var(--line-height-relaxed);
+        letter-spacing: var(--letter-spacing-tighter);
+    }
+
+    .title--small {
+        font-size: 24px;
+        line-height: var(--line-height-relaxed);
+        letter-spacing: var(--letter-spacing-tight-light);
+    }
+}
+
+/* СТИЛИ КНОПОК */
+.button {
+    font-family: var(--font-button);
+    font-weight: var(--fw-regular);
+}
+
+.button--medium {
+    font-size: 16px;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.button--large {
+    font-size: 20px;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+/* ТЕКСТОВЫЕ СТИЛИ */
+.text {
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--letter-spacing-normal);
+    margin-top: 0;
+}
+
+/* Модификаторы для paragraph spacing */
+.text--spacing-10 {
+    margin-bottom: var(--space-10);
+}
+
+.text--spacing-14 {
+    margin-bottom: var(--space-14);
+}
+
+.text--spacing-16 {
+    margin-bottom: var(--space-16);
+}
+
+.text--no-spacing {
+    margin-bottom: 0;
+}
+
+.text--spacing-10:last-child,
+.text--spacing-14:last-child,
+.text--spacing-16:last-child {
+    margin-bottom: 0;
+}
+
+/* конкретные стили */
+.text__body--small {
+    font-size: 16px;
+    line-height: var(--line-height-auto);
+}
+
+.text__body--medium {
+    font-size: 20px;
+    line-height: var(--line-height-auto);
+}
+
+.text--important-small {
+    font-size: 16px;
+    line-height: var(--line-height-extra-loose);
+    font-weight: var(--fw-semibold);
+}
+
+.text--accent-large {
+    font-size: 40px;
+    line-height: var(--line-height-loose);
+    color: var(--text-accent);
+}
+
+.text--accent-medium {
+    font-size: 32px;
+    line-height: var(--line-height-loose);
+    color: var(--text-accent);
+}
+
+.text--accent-small {
+    font-size: 24px;
+    line-height: var(--line-height-loose);
+    color: var(--text-accent);
+}
+
+.text--accent-extra-small {
+    font-size: 20px;
+    line-height: var(--line-height-loose);
+    color: var(--text-accent);
+}
+
+/*
+ * СТИЛИ С LIST SPACING:
+ * - text--body-s (spacing: 12px)
+ * - text--body-m (spacing: 8px)
+ * - text--important-s (spacing: 12px)
+ *
+ * СТИЛИ БЕЗ LIST SPACING:
+ * - text--accent-l
+ * - text--accent-s
+ * - text--accent-m
+ * - text--accent-xs
+ */
+
+/* СТИЛИ ДЛЯ СПИСКОВ */
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: var(--space-16) 0;
+}
+
+.list-item--body-s {
+    margin-bottom: 12px;
+}
+
+.list-item--body-m {
+    margin-bottom: 8px;
+}
+
+.list-item--important-s {
+    margin-bottom: 12px;
+}
+
+.list-item:last-child {
+    margin-bottom: 0;
+}

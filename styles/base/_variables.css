@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Цвета */
+  --color-white-main: rgba(255, 255, 255, 1);
+  --color-white-700: rgba(255, 255, 255, 0.72);
+  --color-white-200: rgba(255, 255, 255, 0.2);
+
+  --color-gray-main: rgba(203, 205, 244, 1);
+  --color-gray-400: rgba(244, 245, 249, 1);
+
+  --color-brown-main: rgba(66, 76, 92, 1);
+  --color-brown-100: rgba(66, 76, 92, .12);
+
+  --color-violet-main: rgba(105, 111, 229, 1);
+  --color-violet-darker: rgba(83, 86, 174, 1);
+
+  --color-red-main: rgba(255, 85, 85, 1);
+  --color-red-200: rgba(255, 85, 85, 0.2);
+}
+
+:root {
+  /* Цветовые схемы */
+  --bg-primary: var(--color-white-main);
+  --bg-primary-inverse: var(--color-brown-main);
+  --bg-secondary: var(--color-gray-400);
+  --bg-accent: var(--color-violet-main);
+  --bg-accent-active: var(--color-violet-darker);
+  --bg-error: var(--color-red-200);
+
+  --border-primary: var(--color-brown-100);
+  --border-primary-inverse: var(--color-white-200);
+  --border-primary-inverse-hover: var(--color-white-main);
+  --border-primary-inverse-active: var(--color-white-main);
+  --border-secondary: var(--color-gray-main);
+  --border-accent: var(--color-violet-main);
+  --border-error: var(--color-red-main);
+
+  --text-primary: var(--color-brown-main);
+  --text-primary-inverse: var(--color-white-main);
+  --text-secondary-inverse: var(--color-white-700);
+  --text-accent: var(--color-violet-main);
+  --text-error: var(--color-red-main);
+
+  --icon-primary: var(--color-brown-main);
+  --icon-primary-inverse: var(--color-white-main);
+  --icon-accent: var(--color-violet-main);
+  --icon-error: var(--color-red-main);
+
+  --header-borderline-color: var(--color-violet-main);
+  --header-nav-text: var(--color-brown-main);
+  --header-nav-text-hover: var(--color-violet-main);
+  --button-ghost-color: var(--color-violet-main);
+  --button-bordered-color: var(--color-violet-main);
+  --button-bordered-border: var(--color-gray-main);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+li {
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: var(--font-google);
+}
+
+:root {
+  --font-google: 'Onest', sans-serif;
+  --font-custom: 'Gilroy', sans-serif;
+
+  --font-title: var(--font-custom);
+  --font-body: var(--font-google);
+  --font-button: var(--font-google);
+
+   --fw-semibold: 600;
+  --fw-regular: 400;
+
+   --letter-spacing-tightest: -2px;
+  --letter-spacing-tighter: -1.6px;
+  --letter-spacing-tight: -1px;
+  --letter-spacing-tight-light: -0.6px;
+  --letter-spacing-normal: 0px;
+
+  --line-height-tightest: 0.94;
+  --line-height-tighter: 0.96;
+  --line-height-normal: 1;
+  --line-height-relaxed: 1.05;
+  --line-height-loose: 1.2;
+  --line-height-extra-loose: 1.25;
+  --line-height-auto: auto;
+
+   --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-14: 0.875rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-72: 4.5rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-128: 7.5rem;
+  --space-144: 9rem;
+
+  /* Размеры header */
+  --header-logo-width: 6.75rem;
+  --header-logo-height: 2.3125rem;
+  --header-nav-item-height: 3rem;
+  --header-button-height: 3rem;
+  --header-left-side-width: 32.25rem;
+  --header-left-side-gap: 4rem;
+}
+
+/* BREAKPOINTS */
+:root {
+  --bp-mobile: 22.5rem;
+  /* 360px */
+  --bp-tablet: 45rem;
+  /* 720px */
+  --bp-laptop: 67.5rem;
+  /* 1080px */
+  --bp-desktop: 90rem;
+  /* 1440px */
+}
+
+:root {
+  --header-max-width: 90rem;
+  --header-padding: var(--space-16);
+}
+
+@media (min-width: 90rem) {
+  :root {
+    --header-padding: var(--space-24);
+  }
+}

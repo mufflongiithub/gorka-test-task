@@ -1,0 +1,286 @@
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 13;
+  width: 100%;
+  background: var(--bg-primary);
+  padding: var(--header-padding);
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-16);
+  width: 100%;
+  max-width: var(--header-max-width);
+  margin: 0 auto;
+}
+
+/* BORDERLINE */
+.header__borderline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--header-borderline-color);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2;
+}
+
+/* тут допилить анимацию - after, слои? */
+.header:hover .header__borderline {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* LEFT-SIDE контейнер */
+.header__left-side {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.header__logo {
+  width: var(--header-logo-width);
+  height: var(--header-logo-height);
+  flex-shrink: 0;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header__logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Бургер меню */
+.header__burger {
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu-button {
+  width: var(--space-48);
+  height: var(--space-48);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-icon {
+  width: var(--space-24);
+  height: var(--space-8);
+  display: block;
+}
+
+/* BUTTONS */
+.header__actions {
+  display: none;
+  align-items: center;
+  gap: var(--space-32);
+}
+
+.button-ghost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--space-8) 0;
+  gap: var(--space-4);
+  width: 7.9375rem;
+  height: var(--header-button-height);
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-ghost-name {
+  width: 100%;
+  height: 1.25rem;
+  font-family: var(--font-button);
+  font-weight: var(--fw-semibold);
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--button-ghost-color);
+}
+
+.button-ghost-underline {
+  width: 0;
+  height: 1px;
+  background: var(--button-ghost-color);
+  transition: width 0.4s ease;
+}
+
+.button-ghost:hover .button-ghost-underline {
+  width: 100%;
+}
+
+.button--bordered {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-16) var(--space-40);
+  gap: var(--space-8);
+  min-width: 13.25rem;
+  height: var(--header-button-height);
+  border: 1px solid var(--button-bordered-border);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.button--bordered:hover {
+  border-color: var(--button-bordered-color);
+}
+
+.button-name {
+  min-width: 8.25rem;
+  height: 1rem;
+  font-family: var(--font-button);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--button-bordered-color);
+  white-space: nowrap;
+}
+
+/* НАВИГАЦИЯ */
+.header__nav {
+  display: none;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: var(--space-32);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--space-8) 0;
+  gap: var(--space-4);
+  height: var(--header-nav-item-height);
+}
+
+.header__nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__nav-text {
+  width: auto;
+  height: 1.25rem;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--header-nav-text);
+  transition: color 0.3s ease;
+}
+
+.header__nav-underline {
+  width: 0;
+  height: 1px;
+  background: var(--header-borderline-color);
+  transition: width 0.3s ease;
+  margin-top: var(--space-4);
+}
+
+.header__nav-link:hover .header__nav-text {
+  color: var(--header-nav-text-hover);
+}
+
+.header__nav-link:hover .header__nav-underline {
+  width: 100%;
+}
+
+/* АДАПТИВНЫЕ СТИЛИ */
+
+/* Планшет (720px+) */
+@media (min-width: 45rem) {
+  .header {
+    padding: var(--space-24);
+  }
+
+  .header__content {
+    gap: var(--space-24);
+  }
+
+  .header__actions {
+    display: flex;
+  }
+}
+
+/* Десктоп 1440 */
+@media (min-width: 90rem) {
+  .header__left-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: var(--header-left-side-gap);
+    width: var(--header-left-side-width);
+    height: var(--header-nav-item-height);
+  }
+
+  .header__nav {
+    display: flex;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header {
+    padding: var(--space-24) var(--space-40);
+  }
+
+  .header__content {
+    gap: var(--space-24);
+  }
+
+  .header__actions {
+    gap: var(--space-40);
+  }
+}
+
+/* Мобильные 719 */
+@media (max-width: 44.9375rem) {
+  .header__actions {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__borderline {
+    display: none;
+  }
+}
