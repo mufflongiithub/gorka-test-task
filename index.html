@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/png" sizes="48x48" href="./img/fav.png">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <title>Тестовое задание</title>
+</head>
+
+<body>
+    <div class="main-layout">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__content">
+                <!-- LEFT-SIDE контейнер (лого + навигация) -->
+                <div class="header__left-side">
+                    <!-- LOGO -->
+                    <div class="header__logo">
+                        <a href="/" class="logo">
+                            <img src="./img/logo.svg" alt="Company Name" class="header__logo-image">
+                        </a>
+                    </div>
+
+                    <!-- NAVIGATION -->
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">
+                                    <span class="header__nav-text">Студия</span>
+                                    <div class="header__nav-underline"></div>
+                                </a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">
+                                    <span class="header__nav-text">Проекты</span>
+                                    <div class="header__nav-underline"></div>
+                                </a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">
+                                    <span class="header__nav-text">Услуги</span>
+                                    <div class="header__nav-underline"></div>
+                                </a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">
+                                    <span class="header__nav-text">Контакты</span>
+                                    <div class="header__nav-underline"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- BUTTONS (справа) -->
+                <div class="header__actions">
+                    <a href="tel:88002228684" class="button-ghost">
+                        <span class="button-ghost-name">8 800 222 86 84</span>
+                        <div class="button-ghost-underline"></div>
+                    </a>
+                    <button class="button button--bordered">
+                        <span class="button-name">Обсудить проект</span>
+                    </button>
+                </div>
+
+                <!-- BURGER меню -->
+                <div class="header__burger">
+                    <button class="burger-menu-button" aria-label="Open menu">
+                        <img src="./img/icon.svg" alt="" class="burger-icon">
+                    </button>
+                </div>
+            </div>
+            <!-- BORDERLINE на весь header -->
+            <div class="header__borderline"></div>
+        </header>
+
+        <!-- Основная структура -->
+        <main class="content-container">
+            <section class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">Тестовое задание</h1>
+                    <p class="hero__subtitle">на вакансию веб-разработчика в студию
+                        <a href="/" class="hero__link">Art gorka</a>
+                    </p>
+                </div>
+
+                <div class="hero__buttons">
+                    <button class="button button--primary" aria-label="Для чего-то нажми меня">
+                        <span class="button__text">Нажми меня</span>
+                    </button>
+
+                    <button class="button button--secondary" aria-label="И меня зачем-то нажми">
+                        <span class="button__text">Меня тоже нажми</span>
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>
